@@ -139,6 +139,110 @@ if(($peso_novato_um >= 60 ) AND ( $peso_novato_dois == 70 ) AND ($altura_novato_
    echo "Atleta está no profissional";
 }
 
+//Estrutura de Contole - IF e ELSE
+ 
+$salario_cargo_atual = 4000.00;
+$codigo_cargo = 92;
+ 
+$codigo_gerente = 91;
+$codigo_analista = 92;
+$codigo_tecnico = 93;
+ 
+ 
+$percentual_gerente = 10;
+$percentual_analista = 20;
+$percentual_tecnico = 30;
+$percentual_fora_tabela = 35.5;
+ 
+$resultado_aumento_gerente = $salario_cargo_atual * ($percentual_gerente/100);
+ 
+ 
+$resultado_aumento_analista = $salario_cargo_atual * ($percentual_analista/100);
+ 
+$resultado_aumento_tecnico = $salario_cargo_atual * ($percentual_tecnico/100);
+ 
+$resultado_aumento_fora_tabela = $salario_cargo_atual * ($percentual_fora_tabela/100);
+ 
+$aumento_salario_total_gerente = $salario_cargo_atual + $resultado_aumento_gerente;
+$aumento_salario_total_analista = $salario_cargo_atual + $resultado_aumento_analista;
+$aumento_salario_total_tecnico = $salario_cargo_atual + $resultado_aumento_tecnico;
+$aumento_salario_total_fora_tabela = $salario_cargo_atual + $resultado_aumento_fora_tabela;
+ 
+ 
+if($codigo_cargo == $codigo_gerente){
+    echo "Olá Gerente, valor do aumento é de: $resultado_aumento_gerente ,
+   valor total do salario mais aumento é de:"
+    .number_format($aumento_salario_total_gerente, 2, ".",".")."<br>";
+   
+}elseif($codigo_cargo == $codigo_analista){
+    echo "Seu codigo é 92: Cargo Analista, valor do aumento é de: $resultado_aumento_analista ,
+   valor total do salario mais aumento é de:"
+    .number_format($aumento_salario_total_analista, 2, ".",".")."<br><br>";
+}
+elseif($codigo_cargo == $codigo_tecnico){
+    echo "Seu codigo é 93: Cargo Técnico, valor do aumento é de: $resultado_aumento_tecnico ,
+   valor total do salario mais aumento é de:"
+    .number_format($aumento_salario_total_tecnico, 2, ".",".")."<br><br>";
+}
+else{
+    echo "Olá, valor do aumento é de: $resultado_aumento_fora_tabela ,
+   valor total do salario mais aumento é de:"
+    .number_format($aumento_salario_total_fora_tabela, 2, ".",".")."<br><br>";
+}
+ 
+//exemplo do Fafa começa aqui.
+/*$salario_cargo_atual = 4000.00;
+ 
+$codigo_cargo = 93;
+ 
+$codigo_gerente  = 91;
+$codigo_analista = 92;
+$codigo_tecnico  = 93;
+ 
+ 
+$percentual_gerente     = 10;
+$percentual_analista    = 20;
+$percentual_tecnico     = 30;
+$percentual_fora_tabela = 35.5;
+ 
+ 
+if($codigo_cargo == $codigo_gerente){
+        $resultado_aumento = $salario_cargo_atual * ($percentual_gerente/100);
+        $aumento_salario_total = $salario_cargo_atual + $resultado_aumento;
+       
+        echo "Olá Gerente, valor do aumento é de: R$ {$resultado_aumento} ,valor total do salario mais aumento é de: R$ ".number_format($aumento_salario_total, 2, ".",".")."<br>";
+   
+}elseif($codigo_cargo == $codigo_analista){
+        $resultado_aumento = $salario_cargo_atual * ($percentual_analista/100);
+        $aumento_salario_total = $salario_cargo_atual + $resultado_aumento;
+       
+        echo "Seu codigo é 92: Cargo Analista, valor do aumento é de: R$ {$resultado_aumento} ,valor total do salario mais aumento é de: R$ ".number_format($aumento_salario_total, 2, ".",".")."<br>";
+}
+elseif($codigo_cargo == $codigo_tecnico){
+        $resultado_aumento = $salario_cargo_atual * ($percentual_tecnico/100);
+        $aumento_salario_total = $salario_cargo_atual + $resultado_aumento;
+       
+    echo "Seu codigo é 93: Cargo Técnico, valor do aumento é de: R$ {$resultado_aumento} ,valor total do salario mais aumento é de: R$ ".number_format($aumento_salario_total, 2, ".",".")."<br>";
+}
+else{
+        $resultado_aumento = $salario_cargo_atual * ($percentual_fora_tabela/100);
+        $aumento_salario_total = $salario_cargo_atual + $resultado_aumento;
+    echo "Olá, valor do aumento é de: R$ {$resultado_aumento}, valor total do salario mais aumento é de: R$ " .number_format($aumento_salario_total, 2, ".",".")."<br>";
+}*/
+ 
+//Exercicio aluno aprovado ou reprovado
+ 
+$nota_aluno_A = 10;
+$media_aluno_A = 7;
+ 
+if($nota_aluno_A >= $media_aluno_A){
+    echo "Aluno aprovado!";
+}else{
+    echo "Aluno reprovado.";
+}
+ 
+echo "<hr>"
+
 
 ?>
 

@@ -82,7 +82,7 @@ $b = 2;
 $c = 3;
 $result = 6;
 
-//Operadoes depois atribui exemplos: += , -=, *=, /=, %=
+//Operadores de atribuição exemplos: += , -=, *=, /=, %=
 echo "Somar o valor $result pelo valor $a <br>";
 $result +=$a;
 echo "Resultado da adição: $result <br><br>";
@@ -104,11 +104,40 @@ $result %= $b;
 echo "Resultado do módulo $result <br><br>";
 
 //Concatenando 
-
+/*
 $d = "Bom";
 $d1 .= "dia";
 $d2 .= "Rafael";
-echo $d;
+echo $d"<br>";*/
 
-echo"<hr><h2>Operadoes Lógicos</h2>";
 
+//switch
+echo"<hr>";
+$y=3;
+switch($y){
+    case 1:
+        echo "Sacar dinehiro. <br>";
+        break;
+
+    case 2:
+        echo "Depositar dinheiro. <br>";
+        break;
+    
+    case 3:
+        echo "Imprimir cheque. <br>";
+        break;
+    default:
+        echo "Opção não encontrada. <br>";
+    break;
+}
+
+echo"<hr>";
+//While
+
+$k=1;
+//O while é o comando de repetição
+while($k <= 10){
+    echo "Cadastro: $k <br>";
+    //Incrementar a condição utilizada no while
+    $k++;
+}

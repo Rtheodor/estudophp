@@ -79,12 +79,12 @@ echo "Valor total do mes de Junho R$ ". number_format($unidades_dois, 2,",",".")
 echo "<hr> <h2>Operadores de Incremento e Decremento</h2></hr> ";
 
 $produto_a = 115;
-echo "Quantidade do produto A: ".--$produto_a."<br>";
-echo "Quantidade do produto A: ".$produto_a."<br>";
+echo "Quantidade do produto A: ".--$produto_a."<br><br>";
+echo "Quantidade do produto A: ".$produto_a."<br><br>";
 
 $veiculos = 1529;
-echo "Veiculos ate o momento: ".$veiculos++."<br>";
-echo "Veiculos que passram: ".$veiculos."<br>";
+echo "Veiculos ate o momento: ".number_format($veiculos++, 2, ".",".")."<br>";
+echo "Veiculos que passram: ".number_format($veiculos++, 2, ".",".")."<br>";
 
 //operadores de comparação
 echo"<hr><h2>Operadores de comparação</h2>";
@@ -121,75 +121,95 @@ if($peso <= $categoria_novato){
 
 
 //Operadores Lógico
-echo "<hr>";
-$peso_novato_um = 50;
-$peso_novato_dois = 60;
+echo "<hr><h2>Operadores Lógicos</h2>";
+$peso_novato = 60;
+$altura_novato = 1.70;
 
-$altura_novato_um = 1.70;
+$peso_do_atleta = 59;
+$altura_do_atleta = 1.70;
 
-$peso_profissional_um = 60;
-$peso_profissional_dois = 80;
 
-$altura_profissional_um = 1.70;
-$altura_profissional_dois = 1.90;
-
-if(($peso_novato_um >= 60 ) AND ( $peso_novato_dois == 70 ) AND ($altura_novato_um <= 1.50)){
-    echo "Atleta está na cateforia: Novato";
+if(($peso_do_atleta <= $peso_novato) AND  ($altura_do_atleta <= $altura_novato)){
+    echo "Atleta está na catetoria: Novato <br><br>";
 }else {
-   echo "Atleta está no profissional";
+   echo "Atleta está na categoria: Profissional <br><br>";
+}
+
+
+//Aluno e media
+$nota_do_aluno = 8.6;
+$media_aluno = 8.5;
+$frequencia_aluno = 71;
+$frequencia_aula = 70;
+
+if(($nota_do_aluno > $media_aluno )&&( $frequencia_aluno > $frequencia_aula )){
+    echo "Aluno aprovado para a bolsa. <br><br> ";
+}else{
+    echo "Aluno não aprovado para a bolsa.<br><br>";
+}
+
+//Números iguais ou o maior
+
+$primeiro_numero = 3;
+$segundo_numero = 2;
+
+if($primeiro_numero > $segundo_numero){
+    echo"O primeiro numero $primeiro_numero é maior que o segundo número $segundo_numero .<br><br> ";
+}else{
+    echo "O segundo numero $segundo_numero  é maior que o primeiro número $primeiro_numero .<br><br>";
 }
 
 //Estrutura de Contole - IF e ELSE
- 
+
 $salario_cargo_atual = 4000.00;
 $codigo_cargo = 92;
- 
+
 $codigo_gerente = 91;
 $codigo_analista = 92;
 $codigo_tecnico = 93;
  
- 
+
 $percentual_gerente = 10;
 $percentual_analista = 20;
 $percentual_tecnico = 30;
 $percentual_fora_tabela = 35.5;
- 
+
 $resultado_aumento_gerente = $salario_cargo_atual * ($percentual_gerente/100);
- 
- 
+
+
 $resultado_aumento_analista = $salario_cargo_atual * ($percentual_analista/100);
- 
+
 $resultado_aumento_tecnico = $salario_cargo_atual * ($percentual_tecnico/100);
- 
+
 $resultado_aumento_fora_tabela = $salario_cargo_atual * ($percentual_fora_tabela/100);
- 
+
 $aumento_salario_total_gerente = $salario_cargo_atual + $resultado_aumento_gerente;
 $aumento_salario_total_analista = $salario_cargo_atual + $resultado_aumento_analista;
 $aumento_salario_total_tecnico = $salario_cargo_atual + $resultado_aumento_tecnico;
 $aumento_salario_total_fora_tabela = $salario_cargo_atual + $resultado_aumento_fora_tabela;
- 
- 
+
+
 if($codigo_cargo == $codigo_gerente){
-    echo "Olá Gerente, valor do aumento é de: $resultado_aumento_gerente ,
-   valor total do salario mais aumento é de:"
+    echo "Olá Gerente, valor do aumento é de: $resultado_aumento_gerente , 
+    valor total do salario mais aumento é de:" 
     .number_format($aumento_salario_total_gerente, 2, ".",".")."<br>";
-   
+    
 }elseif($codigo_cargo == $codigo_analista){
-    echo "Seu codigo é 92: Cargo Analista, valor do aumento é de: $resultado_aumento_analista ,
-   valor total do salario mais aumento é de:"
+    echo "Seu codigo é 92: Cargo Analista, valor do aumento é de: $resultado_aumento_analista , 
+    valor total do salario mais aumento é de:" 
     .number_format($aumento_salario_total_analista, 2, ".",".")."<br><br>";
 }
 elseif($codigo_cargo == $codigo_tecnico){
-    echo "Seu codigo é 93: Cargo Técnico, valor do aumento é de: $resultado_aumento_tecnico ,
-   valor total do salario mais aumento é de:"
+    echo "Seu codigo é 93: Cargo Técnico, valor do aumento é de: $resultado_aumento_tecnico , 
+    valor total do salario mais aumento é de:" 
     .number_format($aumento_salario_total_tecnico, 2, ".",".")."<br><br>";
 }
 else{
-    echo "Olá, valor do aumento é de: $resultado_aumento_fora_tabela ,
-   valor total do salario mais aumento é de:"
+    echo "Olá, valor do aumento é de: $resultado_aumento_fora_tabela , 
+    valor total do salario mais aumento é de:" 
     .number_format($aumento_salario_total_fora_tabela, 2, ".",".")."<br><br>";
 }
- 
+
 //exemplo do Fafa começa aqui.
 /*$salario_cargo_atual = 4000.00;
  
@@ -229,20 +249,142 @@ else{
         $aumento_salario_total = $salario_cargo_atual + $resultado_aumento;
     echo "Olá, valor do aumento é de: R$ {$resultado_aumento}, valor total do salario mais aumento é de: R$ " .number_format($aumento_salario_total, 2, ".",".")."<br>";
 }*/
- 
+
 //Exercicio aluno aprovado ou reprovado
- 
+
 $nota_aluno_A = 10;
 $media_aluno_A = 7;
- 
+
 if($nota_aluno_A >= $media_aluno_A){
     echo "Aluno aprovado!";
 }else{
     echo "Aluno reprovado.";
 }
- 
-echo "<hr>"
 
+echo "<hr>";
+
+//Estrutura de controle - IF, ELSEIF E ELSE
+
+$notaa_aaluno = 0.3;
+
+if(($notaa_aaluno >= 8) OR ($notaa_aaluno == 10)){
+    echo "O conceito é: A";
+}elseif(($notaa_aaluno >= 7)OR($notaa_aaluno == 7.9)){
+    echo "O conceito é B";
+}elseif(($notaa_aaluno >= 6)OR($notaa_aaluno == 6.9)){
+    echo "O conceito é C";
+}elseif(($notaa_aaluno >= 5)OR($notaa_aaluno == 5.9)){
+    echo "O conceito é D";
+}elseif(($notaa_aaluno >= 0)OR($notaa_aaluno == 4.9)){
+    echo "O conceito é E";
+}else{
+    echo"ok, nao existe nota!";
+}
+
+//Switch
+echo "<hr>";
+
+$braba_codigo = 8;
+$salario_atual =4000;
+
+$escriturario_percento = 50;
+$secretaria_percento = 35;
+$caixa_percento = 20;
+$gerentee_percento = 10;
+$diretoro_percento = 5;
+
+
+switch($braba_codigo){
+    case 1:
+        $resultado_porcentagem = $salario_atual * ($escriturario_percento/100);
+        $aumento_salario_t = $salario_atual + $resultado_porcentagem;
+        
+        echo "Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+        
+    break;
+    
+    case 2:
+        $resultado_porcentagem = $salario_atual * ($secretaria_percento/100);
+        $aumento_salario_t = $salario_atual + $resultado_porcentagem;
+        
+        echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+        
+    break;
+    
+    case 3:
+        $resultado_porcentagem = $salario_atual * ($caixa_percento/100);
+        $aumento_salario_t = $salario_atual + $resultado_porcentagem;
+        
+        echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+        
+    break;
+    
+    case 4:
+        $resultado_porcentagem = $salario_atual * ($gerentee_percento/100);
+        $aumento_salario_t = $salario_atual + $resultado_porcentagem;
+        
+        echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+        
+    break;
+    
+    case 5:
+        $resultado_porcentagem = $salario_atual * ($diretoro_percento/100);
+        $aumento_salario_t = $salario_atual + $resultado_porcentagem;
+        
+        echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+        
+    break;
+
+    default:
+        echo "Opção não encontrada. <br>";
+    break;
+}
+
+//Switch status do codigo
+$codigo_status = 30;
+
+switch($codigo_status){
+    case 10:
+        echo "Aguardando pagamento";
+    break;
+    
+    case 20:
+        echo "Pago.";
+    break;
+
+    case 30:
+        echo "Em transporte.";
+    break;
+
+    case 40:
+        echo "Entregue.";
+    break;
+    
+    default:
+        echo "Opçãp invalida!";
+    break;
+
+}
+
+//While 
+echo"<hr>";
+$gloria_jesus = 1;
+
+while($gloria_jesus <= 10){
+    echo "Louvar a Deus mais e mais: $gloria_jesus <br><br>";
+    //Incrementando o valor
+    $gloria_jesus++;
+}
+
+$numero_intermediario =10;
+
+
+/*while($stitch<=10){
+    echo "Numeros intermediarios são: $numero_intermediario ";
+    $stitch++; 
+
+    
+}*/
 
 ?>
 

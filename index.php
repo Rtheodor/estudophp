@@ -121,7 +121,20 @@
         }else{
             echo "Utilizando ||: Falso. <br><br> ";
         }
+        
+    echo "<hr>";
 
+        $n1 = 5;
+        $n2 = 15;
+        $i  = $n1;
+        
+            while($i<$n2){
+                echo $i;
+                $i++;
+            }
+                 
+           
+        
 
 
 

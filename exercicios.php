@@ -379,12 +379,43 @@ while($gloria_jesus <= 10){
 $numero_intermediario =10;
 
 
-/*while($stitch<=10){
-    echo "Numeros intermediarios são: $numero_intermediario ";
-    $stitch++; 
+//While 
+echo"<hr>";
+$gloria_jesus = 1;
 
+while($gloria_jesus <= 10){
+    echo "Louvar a Deus mais e mais: $gloria_jesus <br><br>";
+    //Incrementando o valor
+    $gloria_jesus++;
+}
+echo"<hr>";
+
+$para=0;
+$teste = 10;
+
+
+while($para<$teste){
+
+    echo "Numeros intermediarios são:" .$para. "<br><br>";
+    ++$para;
     
-}*/
+    
+}
+
+//Do While
+echo "<hr>";
+
+$p = 90;
+
+
+do{
+    echa naoo "Email enviado: $p <br>";
+    $p++;
+    if($p<=99){
+        echo "Número inválido. ";
+        break;
+    };
+}while($p<=102);
 
 ?>
 

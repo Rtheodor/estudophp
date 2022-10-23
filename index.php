@@ -133,7 +133,17 @@
                 $i++;
             }
                  
-           
+    echo "<hr>";
+            //for (<inicialização>;<condição>;<incremento ou decremento>);
+ 
+    for($bolas = 1; $bolas <=10; $bolas++){
+        echo "Quantas bolas até o momento: $bolas <br>";
+    }
+
+    for($vagas = 10; $vagas >= 1; $vagas--){
+        echo "Quantidades de vagas: $vagas <br>";
+        echo  "Novo cadastro! <br><br>";
+    }
         
 
 

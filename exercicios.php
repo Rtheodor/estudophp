@@ -417,5 +417,23 @@ do{
     };
 }while($p<=102);
 
+//Usando FOR + incremento + função date
+
+//função date traz a data atual
+$today = date("d/m/Y H:i ");
+for($email_enviados = 1; $email_enviados <= 10; $email_enviados++){
+    echo "Email enviado as: " .$today." quantidade de email enviado: ".$email_enviados. "<br>";
+}
+ 
+//Empresa B
+echo"<br>";
+ 
+$numero_carteirinhas = 56898;
+ 
+ 
+ 
+for($carteirinhas = 1; $carteirinhas <=25; $carteirinhas++){
+    echo "O número da carteirinha é: " .$numero_carteirinhas++. " Total de carteirinhas é de: $carteirinhas <br><br>";
+}
 ?>
 

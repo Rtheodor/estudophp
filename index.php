@@ -144,7 +144,21 @@
         echo "Quantidades de vagas: $vagas <br>";
         echo  "Novo cadastro! <br><br>";
     }
-        
+
+    echo "<hr><h2>Usando foreach</h2>";
+    $alunos = ["j","k","l","m"];
+    //var_dump($alunos);
+
+    foreach ($alunos as $aluno) {
+        echo "Nome: $aluno<br>";
+    }
+
+    echo "<br>";
+    $estados=["Rio Grande do Sul", "Santa Catarina", "Paraná"];
+foreach($estados as $estado){
+    echo "O estado é:  $estado<br>";
+}
+
 
 
 

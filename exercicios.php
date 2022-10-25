@@ -435,5 +435,42 @@ $numero_carteirinhas = 56898;
 for($carteirinhas = 1; $carteirinhas <=25; $carteirinhas++){
     echo "O número da carteirinha é: " .$numero_carteirinhas++. " Total de carteirinhas é de: $carteirinhas <br><br>";
 }
+
+
+
+
+//Usando foreach
+echo"<hr><h2>Usando foreach </h2>";
+ 
+// a palavra as é uma palavra reservada
+$notas_do_filme = [9,8,5,7,8,9,10,9,10,8,7,10,9];
+
+$qtd  = array_sum($notas_do_filme); //quantos filmes tiveram notas
+var_dump($qtd);
+// a palavra as é uma palavra reservada
+foreach ($notas_do_filme as $notas_do_filme){
+    $nota_empresa_b = $notas_do_filme / $qtd;
+    var_dump($nota_empresa_b);
+    // para pegar a media é soma todos os valores e dividir pela quantidade de itens q foram avaliados
+    echo"Nota do filme:" .$notas_do_filme. " Média " .round($nota_empresa_b,2). "<br><br>";
+
+}
+
+
+
+echo "<br>";
+$opiniao_pessoas = ["s","s","s","n","s","n","n","s","s","s","s","n","s","s","n","s","s","s","s"];
+var_dump($opiniao_pessoas);
+
+$opcao_contar = array_count_values(array_map("strtolower", $opiniao_pessoas));
+$opcao_sim = $opcao_contar["s"];
+var_dump($opcao_contar);
+$opcao_nao = $opcao_contar["n"];
+var_dump($opcao_sim);
+var_dump($opcao_nao);
+
+echo "Número de pessoas que respondeu Sim: $opcao_sim <br><br>";
+echo "Número de pessoas que respondeu Não: $opcao_nao";
+
 ?>
 

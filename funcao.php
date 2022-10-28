@@ -85,6 +85,33 @@
     $boi_tata = 4;
     $mulher_do_corno = verificar_status($boi_tata);
     echo $mulher_do_corno. "<br>";
+
+    echo "<hr>";
+
+        $navio_aguenta = 2;
+        $carregados = carregamento_navio($navio_aguenta);
+        echo  "Foram carregados $navio_aguenta $carregados. <br>";
+
+        
+        function carregamento_navio($numero_conteiner){
+            echo "Acessou a função <br>";
+            echo "Parametro: $numero_conteiner <br><br>";
+            
+            $total_navio_aguenta = 10;
+            
+            $falta_conteiner = $total_navio_aguenta - $numero_conteiner;
+
+            if($total_navio_aguenta == $numero_conteiner){
+                $msg = " Carregamento concluído.";
+               
+            }else{                
+                
+                $msg = "Faltam $falta_conteiner";
+                
+            }
+              return $msg;
+        
+        }
  
 ?>
 </body>

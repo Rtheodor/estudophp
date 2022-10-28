@@ -89,10 +89,12 @@
     echo "<hr>";
 
         $navio_aguenta = 2;
+
         $carregados = carregamento_navio($navio_aguenta);
         echo  "Foram carregados $navio_aguenta $carregados. <br>";
 
-        
+        //função para contar quantos conteiners faltam
+        //$numero_conteiner pode ser usado como: $navio_aguenta ou outro nome de variavel.
         function carregamento_navio($numero_conteiner){
             echo "Acessou a função <br>";
             echo "Parametro: $numero_conteiner <br><br>";
@@ -112,7 +114,15 @@
               return $msg;
         
         }
+
+        $aguenta_navio =4;
+        $cheio_carregado = carregamento_navio($aguenta_navio);
+        echo "Foram carregados $aguenta_navio $cheio_carregado";
  
+        $n = 4;
+        $bloco_navio = carregamento_navio($n);
+        echo "Foram carregados $bloco_navio";
+        
 ?>
 </body>
 </html>

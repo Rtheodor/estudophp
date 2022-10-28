@@ -92,9 +92,10 @@
 
         $carregados = carregamento_navio($navio_aguenta);
         echo  "Foram carregados $navio_aguenta $carregados. <br>";
-
+        
         //função para contar quantos conteiners faltam
         //$numero_conteiner pode ser usado como: $navio_aguenta ou outro nome de variavel.
+        //Antes disso me fodi dois dias penando se usava if, switch ou four. (foreach não sei usar é foda-se uma hora aprendo.); usei o ";" olho pqp que ridiculo isso.
         function carregamento_navio($numero_conteiner){
             echo "Acessou a função <br>";
             echo "Parametro: $numero_conteiner <br><br>";
@@ -122,6 +123,15 @@
         $n = 4;
         $bloco_navio = carregamento_navio($n);
         echo "Foram carregados $bloco_navio";
+
+        $sofia = 4;
+
+        $picoka = carregamento_navio($sofia);
+        echo "Fatlam quantas rolas na sofia $picoka";
+
+        //usei com aspas DUPLAS, bora codar.
+
+        //README leia CHAMPS. porque não usei /* */?
         
 ?>
 </body>

@@ -134,6 +134,67 @@
         //usei com aspas DUPLAS, bora codar.
 
         //README leia CHAMPS. porque não usei /* */?
+
+        //Inico: Passagem de parâmetro por valor e referência
+
+        echo "<hr><h4>Passagem por valor</h4>";
+
+        function salario($num){
+            //otimizando condigo: $num = $num+5; otimizando ficara: $num+=5;
+            $num +=50;
+            echo "Dentro da função - salário com aumento: $num<br>";
+            
+        }
+
+            $salario = 8200;
+            salario($salario);
+
+            echo "Salário sem aumento: $salario<br>";
+
+        
+        echo "<hr>";
+
+
+        function salario_x($num){
+            $num+=100;
+            echo "Dentro da função - slário com aumento: $num<br>";
+
+            return $num;
+        }
+
+        $salario = 8500.47;
+        $salario_com_aumento = salario_x($salario);
+        echo "Fora da função, imprimindo o retorno - Salário com aumento: $salario_com_aumento<br>";
+
+
+        echo "<hr> <h4>Passagem por referência</h4>";
+
+        function salario_y(&$num){
+            $num+=200;
+            echo "Dentro da função - salário com aumento: $num <br>";
+        }
+
+        $salario_apenas_uma_variavel = 9300;
+        salario_y($salario_apenas_uma_variavel);
+
+        echo "Salário com aumento: $salario_apenas_uma_variavel<br>";
+       
+        //Inicio dos exercicios
+
+
+        function producao(& $soma_final){
+            $custo_producao =2000;
+            $porcentagem_produto = 70;
+            $resultado_porcentagem_producao = $custo_producao * ($porcentagem_produto/100);
+            $soma_final = $resultado_porcentagem_producao + $custo_producao;
+            echo "Custo final do produto: ". number_format( $soma_final, 2,",",".")."<br>";
+            return  $soma_final;
+        }
+       echo "<br>";
+        $produto_final = 2000;
+        echo "Valor do produto final: $produto_final<br>";
+        producao($produto_final);
+        echo "Produto final valor de: ".number_format($produto_final, 2,",",".")."<br>" ;
         
 ?>
 </body>

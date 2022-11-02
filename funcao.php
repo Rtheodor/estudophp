@@ -195,6 +195,55 @@
         echo "Valor do produto final: $produto_final<br>";
         producao($produto_final);
         echo "Produto final valor de: ".number_format($produto_final, 2,",",".")."<br>" ;
+
+        echo "<hr>";
+
+        //Fazenda A necessita calcular o gasto de agua em cada safra
+        /*calculando m3 - 1 Hectares Metros (1 x 10000 = 10.000 Metros cúbicos)
+        hectares Metros 1287 x 10000 m3 = 12.870.000 m3 */
+        echo "<br> <h1>Fazenda calcular </h1>";
+        
+        $hectar_vale = 10.000;
+        $hectares = 1287;
+        $hectares_m3 = 12870000;
+        $safra_ano = 3;
+        $agua_gasta_hectare = 5267;
+        $custo_metro_cada = 0.17;
+        $qtd_anos = 5;
+
+
+        //Calcula o gasto de água para todo os hectares em M3
+        $agua_gasto_cada_safra = $agua_gasta_hectare * $hectares;
+        echo "Calcula o gasto de água para todo os hectares em M3 é de: ".number_format($agua_gasto_cada_safra,2,",",".")." Metros cúbicos<br><br>";
+        
+        echo"<hr>";
+
+        //Calcular gasto de água em cada safra em M3
+        $valor_m3_agua = $hectar_vale * $agua_gasta_hectare;
+        echo " Calcular gasto de água em cada safra em M3: ". number_format($valor_m3_agua,2,",",".")." Metros cúbicos<br><br>";
+
+      
+        echo"<hr><h2>O tatal de M3(metros cúbicos) gastos de água no ano</h2>";
+        //Total de M3 gasto de agua no ano (TT =TOTAL) 
+        $tt_gasto_agua_safra_ano = $agua_gasto_cada_safra * $safra_ano;
+
+       echo "O total de M3 gasto de água no ano é de : ".number_format($tt_gasto_agua_safra_ano,2,",",".")." <br><br>";
+
+        //Custo em reais de cada safra
+        echo "<br>";
+        $custo_m3_reais = $hectares_m3 * $custo_metro_cada;
+        echo "O custo em reais de cada safra é de:  R$".number_format($custo_m3_reais,2,",",".")." <br><br>";
+
+        //Custo total do ano 
+        echo "<br>";
+        $tt_custo_ano = $custo_m3_reais * $safra_ano;
+
+        echo "Custo total do ano é de : R$".number_format($tt_custo_ano,2,",",".")." <br><br>";
+        
+        //custo ao longo de 5 anos
+        $somatoria_anos = $tt_custo_ano * $qtd_anos;
+
+        echo "Custo total ao longo de 5 anos é de: R$".number_format($somatoria_anos,2,",",".")." <br><br>";
         
 ?>
 </body>

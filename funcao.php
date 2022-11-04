@@ -244,6 +244,24 @@
         $somatoria_anos = $tt_custo_ano * $qtd_anos;
 
         echo "Custo total ao longo de 5 anos é de: R$".number_format($somatoria_anos,2,",",".")." <br><br>";
+
+        
+        // Não consegui ainda fazer funcionar do modo correto.
+
+        function custoimplantacao(&$num){
+        //Calcula o gasto de água para todo os hectares em M3
+        $agua_gasta_hectares = 5267;
+        $hectaress = 1287;
+         $num = $agua_gasta_hectares * $hectaress;
+         echo "Calcula o gasto de água para todo os hectares em M3 é de: ".number_format($num,2,",",".")." Metros cúbicos<br><br>";
+              return $num;
+        }
+    echo "<br>";
+        
+    $custto_agua_final = 50000;
+    echo "Calcula o gasto de água para todo os hectares em M3 é deeeee: ".$custto_agua_final."<br>";
+    custoimplantacao($custto_agua_final);
+    echo "Calcula o gasto de água para todos os hectares em M3 de forma correta : $custto_agua_final ";
         
 ?>
 </body>

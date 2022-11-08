@@ -217,7 +217,7 @@
         echo "Calcula o gasto de água para todo os hectares em M3 é de: ".number_format($agua_gasto_cada_safra,2,",",".")." Metros cúbicos<br><br>";
         
         echo"<hr>";
-
+        /*
         //Calcular gasto de água em cada safra em M3
         $valor_m3_agua = $hectar_vale * $agua_gasta_hectare;
         echo " Calcular gasto de água em cada safra em M3: ". number_format($valor_m3_agua,2,",",".")." Metros cúbicos<br><br>";
@@ -261,7 +261,41 @@
     $custto_agua_final = 50000;
     echo "Calcula o gasto de água para todo os hectares em M3 é deeeee: ".$custto_agua_final."<br>";
     custoimplantacao($custto_agua_final);
-    echo "Calcula o gasto de água para todos os hectares em M3 de forma correta : $custto_agua_final ";
+    echo "Calcula o gasto de água para todos os hectares em M3 de forma correta : $custto_agua_final ";*/
+
+
+    echo "<hr><h2>Função Recursiva</h2>";
+   //Função recursiva
+        function exibe($nume){
+            if($nume >=1){
+                echo "Valor passado para a função:  $nume <br>";
+                //$qnt = $nume - 1;
+                exibe($nume-1);
+            }
+           
+        }
+        echo exibe(10);
+ 
+        echo"<hr>";
+ 
+        function menu($num){
+            if ($num<=10){
+               
+                echo "Item do Submenu $num <br>";
+                menu($num+1);
+ 
+            }
+        }
+        echo "Item de Menu 1:<br>";
+        echo menu(5);
+        echo "<br>Item de Menu 2:<br>";
+        echo menu(5);
+        echo "<br>Item de Menu 3:<br>";
+        echo menu(5);
+        echo "<br>Item de Menu 4:<br>";
+        echo menu(5);
+        echo "<br>Item de Menu 5:<br>";
+        echo menu(5);
         
 ?>
 </body>

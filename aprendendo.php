@@ -141,3 +141,25 @@ while($k <= 10){
     //Incrementar a condição utilizada no while
     $k++;
 }
+
+echo "<hr>";
+
+$y=1;
+$t = 10;
+$o=$y;
+
+while($o<$y){
+
+    echo "Numeros intermediarios são: $o ";
+    $o++;
+  
+}
+
+echo "<hr>";
+
+$p = 1;
+
+do{
+    echo "Email enviado: $p <br>";
+    $p++;
+}while($p<=10);

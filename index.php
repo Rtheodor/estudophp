@@ -74,9 +74,8 @@
                 echo "Falso: o número $a não é maior ou igual a $c <br><br>";
             }
 
-            //Operadores Lógicos  
-
-            
+        //Operadores Lógicos  
+       
         echo"<hr><h2>Operadoes Lógicos</h2>";
 
         $x = 10;
@@ -121,47 +120,34 @@
         }else{
             echo "Utilizando ||: Falso. <br><br> ";
         }
+
+        //for (<inicialização>;<condição>;<incremento ou decremento>);
+        echo "<hr><h2>Usando for</h2>";
+        for($bolas = 1; $bolas <=10; $bolas++){
+            echo "Quantas bolas até o momento: $bolas <br>";
+        }
+
+        for($vagas = 10; $vagas >= 1; $vagas--){
+            echo "Quantidades de vagas: $vagas <br>";
+            echo  "Novo cadastro! <br><br>";
+        }
         
-    echo "<hr>";
-
-        $n1 = 5;
-        $n2 = 15;
-        $i  = $n1;
         
-            while($i<$n2){
-                echo $i;
-                $i++;
-            }
-                 
-    echo "<hr>";
-            //for (<inicialização>;<condição>;<incremento ou decremento>);
- 
-    for($bolas = 1; $bolas <=10; $bolas++){
-        echo "Quantas bolas até o momento: $bolas <br>";
+        //foreach como usar
+        echo "<hr><h2>Usando foreach</h2>";
+        $alunos = ["j","k","l","m"];
+        //var_dump($alunos);
+
+        foreach ($alunos as $aluno) {
+            echo "Nome: $aluno<br>";
+        }
+
+        echo "<br>";
+        $estados=["Rio Grande do Sul", "Santa Catarina", "Paraná"];
+    foreach($estados as $estado){
+        echo "O estado é:  $estado<br>";
     }
-
-    for($vagas = 10; $vagas >= 1; $vagas--){
-        echo "Quantidades de vagas: $vagas <br>";
-        echo  "Novo cadastro! <br><br>";
-    }
-
-    echo "<hr><h2>Usando foreach</h2>";
-    $alunos = ["j","k","l","m"];
-    //var_dump($alunos);
-
-    foreach ($alunos as $aluno) {
-        echo "Nome: $aluno<br>";
-    }
-
-    echo "<br>";
-    $estados=["Rio Grande do Sul", "Santa Catarina", "Paraná"];
-foreach($estados as $estado){
-    echo "O estado é:  $estado<br>";
-}
-
-
-
-
+    
     ?>
 </body>
 </html>

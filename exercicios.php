@@ -280,7 +280,7 @@
         echo"ok, nao existe nota!";
     }
 
-    //Switch
+    //Switch (Calcula porcentagem mais salario com aumento) 
     echo"<hr><h2>Usando Switch </h2>";
 
     $braba_codigo = 8;
@@ -306,7 +306,7 @@
             $resultado_porcentagem = $salario_atual * ($secretaria_percento/100);
             $aumento_salario_t = $salario_atual + $resultado_porcentagem;
             
-            echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+            echo " Secretario(a) salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
             
         break;
         
@@ -314,7 +314,7 @@
             $resultado_porcentagem = $salario_atual * ($caixa_percento/100);
             $aumento_salario_t = $salario_atual + $resultado_porcentagem;
             
-            echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+            echo " Caixa salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
             
         break;
         
@@ -322,7 +322,7 @@
             $resultado_porcentagem = $salario_atual * ($gerentee_percento/100);
             $aumento_salario_t = $salario_atual + $resultado_porcentagem;
             
-            echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+            echo " Gerente salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
             
         break;
         
@@ -330,7 +330,7 @@
             $resultado_porcentagem = $salario_atual * ($diretoro_percento/100);
             $aumento_salario_t = $salario_atual + $resultado_porcentagem;
             
-            echo " Escriturário salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
+            echo " Diretor(a) salário" .number_format($salario_atual ,2, ".",".")." Salário mais porcentagem somados. ".number_format($aumento_salario_t ,2, ".","."). "";
             
         break;
 

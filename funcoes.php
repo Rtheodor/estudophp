@@ -224,7 +224,7 @@
        echo "O total de M3 gasto de água no ano é de : ".number_format($tt_gasto_agua_safra_ano,2,",",".")." <br><br>";
 
         //Custo em reais de cada safra
-       /* echo "<br>";
+       echo "<br>";
         $custo_m3_reais = $hectares_m3 * $custo_metro_cada;
         echo "O custo em reais de cada safra é de:  R$".number_format($custo_m3_reais,2,",",".")." <br><br>";
 
@@ -258,7 +258,7 @@
     echo "Calcula o gasto de água para todo os hectares em M3 é deeeee: ".$custto_agua_final."<br>";
     custoimplantacao($custto_agua_final);
     echo "Calcula o gasto de água para todos os hectares em M3 de forma correta : $custto_agua_final ";
-   */
+   
 echo "<hr><h2>Função Recursiva</h2>";
    //Função recursiva
         function exibe($nume){
